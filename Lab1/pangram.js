@@ -3,13 +3,13 @@
 // because it uses the letters A-Z at least once (case is irrelevant).
 // Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
 
-function isPangram(inputStr){
+function isPangram(inputStr) {
     strCharCodes = inputStr.split("").map(char => char.toLowerCase().charCodeAt(0));
-    filteredCodes = strCharCodes.filter(code => code >= 97 && code <=122);
+    filteredCodes = strCharCodes.filter(code => code >= 97 && code <= 122);
     const uniqueCodes = Array.from(new Set(filteredCodes));
     uniqueCodesLength = uniqueCodes.length;
     console.log(uniqueCodesLength)
-    if(uniqueCodesLength == 26) return true;
+    if (uniqueCodesLength == 26) return true;
     return false;
 }
 
